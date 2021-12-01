@@ -17,12 +17,12 @@
       <ColumnConstraints maxWidth="50.0" minWidth="50.0" prefWidth="50.0"/>
       <ColumnConstraints maxWidth="50.0" minWidth="50.0" prefWidth="50.0"/>
    </columnConstraints>
-   <Label text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
-   <Button mnemonicParsing="false" text="Button" GridPane.rowIndex="1"/>
-   <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-   <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
-   <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
-   <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="4" GridPane.rowIndex="1"/>
-   <TextField GridPane.columnSpan="2" maxHeight="50.0" minHeight="50.0" prefHeight="50.0"/>
-   <TextField GridPane.columnSpan="2" GridPane.columnIndex="3" maxHeight="50.0" minHeight="50.0" prefHeight="50.0"/>
+   <TextField fx:id="numberone" GridPane.columnSpan="2" maxHeight="50.0" minHeight="50.0" prefHeight="50.0"/>
+   <TextField fx:id="numbertwo" GridPane.columnSpan="2" GridPane.columnIndex="3" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" />
+   <Button mnemonicParsing="false" text="+" onAction="#plus" GridPane.rowIndex="1" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" maxWidth="50.0" minWidth="50.0" prefWidth="50.0"/>
+   <Button mnemonicParsing="false" text="-" onAction="#minus" GridPane.columnIndex="1" GridPane.rowIndex="1" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" maxWidth="50.0" minWidth="50.0" prefWidth="50.0"/>
+   <Button mnemonicParsing="false" text="*" onAction="#multiply" GridPane.columnIndex="2" GridPane.rowIndex="1" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" maxWidth="50.0" minWidth="50.0" prefWidth="50.0"/>
+   <Button mnemonicParsing="false" text="/" onAction="#divide" GridPane.columnIndex="3" GridPane.rowIndex="1" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" maxWidth="50.0" minWidth="50.0" prefWidth="50.0"/>
+   <Button mnemonicParsing="false" text="\%" onAction="#mod" GridPane.columnIndex="4" GridPane.rowIndex="1" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" maxWidth="50.0" minWidth="50.0" prefWidth="50.0"/>
+   <Label fx:id="answer" text="Answer" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.columnSpan="3" alignment="CENTER"/>
 </GridPane>
