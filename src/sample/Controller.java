@@ -2,40 +2,42 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.Spinner;
 
 public class Controller {
-    @FXML private TextField numberone;
-    @FXML private TextField numbertwo;
+    @FXML private Spinner<Double> numberone;
+    @FXML private Spinner<Double> numbertwo;
     @FXML private Label answer;
     @FXML public void plus() {
-        if (numberone.getText().equals("") || numbertwo.getText().equals("")) answer.setText("You have to give two numbers.");
+        if (numberone.getValue()==null || numbertwo.getValue()==null) answer.setText("You have to give two numbers.");
         else{
-            answer.setText(String.valueOf(Double.parseDouble(numberone.getText())+Double.parseDouble(numbertwo.getText())));
+            answer.setText(String.valueOf(numberone.getValue()+numbertwo.getValue()));
         }
     }
     @FXML public void minus() {
-        if (numberone.getText().equals("") || numbertwo.getText().equals("")) answer.setText("You have to give two numbers.");
+        if (numberone.getValue()==null || numbertwo.getValue()==null) answer.setText("You have to give two numbers.");
         else{
-            answer.setText(String.valueOf(Double.parseDouble(numberone.getText())-Double.parseDouble(numbertwo.getText())));
+            answer.setText(String.valueOf(numberone.getValue()-numbertwo.getValue()));
         }
     }
     @FXML public void multiply() {
-        if (numberone.getText().equals("") || numbertwo.getText().equals("")) answer.setText("You have to give two numbers.");
+        if (numberone.getValue()==null || numbertwo.getValue()==null) answer.setText("You have to give two numbers.");
         else{
-            answer.setText(String.valueOf(Double.parseDouble(numberone.getText())*Double.parseDouble(numbertwo.getText())));
+            answer.setText(String.valueOf(numberone.getValue()*numbertwo.getValue()));
         }
     }
     @FXML public void divide() {
-        if (numberone.getText().equals("") || numbertwo.getText().equals("")) answer.setText("You have to give two numbers.");
+        if (numberone.getValue()==null || numbertwo.getValue()==null) answer.setText("You have to give two numbers.");
         else{
-            answer.setText(String.valueOf(Double.parseDouble(numberone.getText())/Double.parseDouble(numbertwo.getText())));
+            if (numbertwo.getValue()==0) answer.setText("Nem oszthatsz nullával");
+            else answer.setText(String.valueOf(numberone.getValue()/numbertwo.getValue()));
         }
     }
     @FXML public void mod() {
-        if (numberone.getText().equals("") || numbertwo.getText().equals("")) answer.setText("You have to give two numbers.");
+        if (numberone.getValue()==null || numbertwo.getValue()==null) answer.setText("You have to give two numbers.");
         else{
-            answer.setText(String.valueOf(Double.parseDouble(numberone.getText())%Double.parseDouble(numbertwo.getText())));
+            if (numbertwo.getValue()==0) answer.setText("Nem oszthatsz nullával");
+            else answer.setText(String.valueOf(numberone.getValue()%numbertwo.getValue()));
         }
     }
 }
